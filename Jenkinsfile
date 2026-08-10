@@ -26,7 +26,8 @@ pipeline{
         }
         stage('tomcat'){
             steps{
-                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat', path: '', url: 'http://15.252.140.106:8080/')], contextPath: 'netflix', war: 'target/*'            }
+                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat', path: '', url: 'http://15.206.203.129:8080/')], contextPath: 'netflix', war: 'target/*'
+            }    
         }
     }
 }
